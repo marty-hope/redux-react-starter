@@ -19,7 +19,7 @@ const doIt = (a=1, b=2, c=4) => {
 const c = ['red', 'blue', 'yellow', 'green'];
 const [faveColor, secFavColor, ...theRest] = c;
 
-const getColors = (a, b, ...colors) => {
+const getColors = (...colors) => {
     console.log(colors);
 }
 console.dir(person);
@@ -35,5 +35,6 @@ console.log(colors === newColors);
 
 doIt(100,200);
 
-getColors(1, 2, c);
+getColors(c);
+getColors(c.concat("gray"));
 console.log('My favorite color is ' + faveColor);
