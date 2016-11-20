@@ -1,11 +1,10 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+const person = {
+    firstname: "Bob",
+    lastname: "Smith"
+};
 
-import { WidgetTableContainer } from './components/widget-table-container';
-import { appStore } from './app-store';
-import { refreshWidgets } from './actions/refresh-widgets';
+const newPerson = Object.assign({}, person);
 
-
-ReactDOM.render(<WidgetTableContainer store={appStore} />, document.querySelector('main'));
-
-refreshWidgets();
+console.dir(person);
+console.dir(newPerson);
+console.log(person === newPerson);
